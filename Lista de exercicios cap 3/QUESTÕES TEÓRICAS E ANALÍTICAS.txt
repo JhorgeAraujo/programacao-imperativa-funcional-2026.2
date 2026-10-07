@@ -1,0 +1,95 @@
+Questão 01:
+a) while: Avalia antes de rodar (mínimo de 0 execuções). do-while: Avalia depois de rodar (mínimo de 1 execução).
+
+b) for: Repetições contadas ou com limites conhecidos. while: Repetições com condição de parada incerta. do-while: Quando o bloco precisa rodar obrigatoriamente ao menos uma vez (menus, validação de entradas).
+
+c) Erro de lógica. Se a condição for verdadeira, o programa trava em um laço infinito, pois o ponto e vírgula ; define um corpo vazio e a condição jamais muda.
+
+Questão 02:
+a) porque a variavel soma nao existe fora do for
+
+b) a instrução int soma = 0; recria e zera a variável em cada iteração
+
+c) 
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int soma = 0;
+
+    for (int i = 1; i < 10; i++) {
+        soma += i * i;
+    }
+
+    printf("Soma final = %d\n", soma);
+    system("PAUSE");
+    return 0;
+} 
+
+Escopo/Visibilidade: Limita o acesso da variável ao bloco {} onde foi declarada
+
+Tempo de vida: Duração da variável na memória (alocada ao entrar no bloco e destruída ao sair)
+
+Questão 03:
+a) 36   18   9   4   2   1
+
+b) Imprime o próximo caractere da tabela ASCII. Os parênteses são necessários porque o operador != tem precedência sobre o de atribuição =
+
+c) Utilizando a instrução break (ou return) dentro de um if
+
+Questão 04:
+a) Encerra o laço imediatamente e envia a execução para a linha após o laço
+
+b) Ignora o restante do bloco atual e pula para a próxima iteração. No for, executa a expressão de incremento
+
+c) Interrompe apenas o laço interno
+
+Questão 05:
+a) Executa 5 iterações.
+
+b)
+i = 0, j = 10 | soma = 10
+
+i = 1, j = 9 | soma = 10
+
+i = 2, j = 8 | soma = 10
+
+i = 3, j = 7 | soma = 10
+
+i = 4, j = 6 | soma = 10
+
+c)
+#include <stdio.h>
+
+int main() {
+    int i = 0, j = 10;
+
+    while (i < j) {
+        printf("i = %d, j = %d | soma = %d\n", i, j, i + j);
+        i++;
+        j--;
+    }
+
+    return 0;
+}
+
+Questão 06:
+a) 6
+
+b) Avalia x < 5 com o valor atual de x e incrementa logo depois. Na comparação $5 < 5$ (falsa), o pós-incremento ainda ocorre e eleva x para $6$.
+
+c) 
+#include <stdio.h>
+
+int main() {
+    int x = 0;
+
+    while (x < 5) {
+        x++;
+    }
+    x++;
+
+    printf("Valor final de x = %d\n", x);
+
+    return 0;
+}

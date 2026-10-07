@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main(){
+    float nota;
+
+    do 
+    {
+        printf("Digite uma nota (entre 0.0 e 10.0): ");
+        scanf("%f", &nota);
+
+        if (nota < 0.0 || nota > 10.0) 
+        {
+            printf("Erro: Valor invalido! A nota deve estar entre 0.0 e 10.0.\n\n");
+        }
+    } while (nota < 0.0 || nota > 10.0);
+
+    printf("Nota registrada com sucesso!\n");
+
+}
